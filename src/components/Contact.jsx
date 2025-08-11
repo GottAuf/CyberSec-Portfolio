@@ -11,7 +11,7 @@ export default function Contact() {
         <form action="https://formspree.io/f/your-form-id" method="POST" ... >
       */}
       <form
-        action="mailto:youremail@example.com"
+        action="mailto:gordiefx@gmail.com"
         method="POST"
         className="flex flex-col gap-4"
       >
@@ -62,7 +62,7 @@ export default function Contact() {
           href="mailto:youremail@example.com"
           className="text-yellow-600 hover:text-yellow-700 underline transition"
         >
-          youremail@example.com
+          gordiefx@gmail.com
         </a>
       </p>
     </section>
