@@ -62,7 +62,7 @@ export default function Contact() {
           href="mailto:youremail@example.com"
           className="text-yellow-600 hover:text-yellow-700 underline transition"
         >
-          gordiefx@gmail.com
+          gcgmee@duck.com
         </a>
       </p>
     </section>
