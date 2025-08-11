@@ -1,4 +1,5 @@
 import React from "react";
+import "tailwindcss";
 import { ChevronRightIcon, ShieldCheckIcon, DocumentTextIcon, ComputerDesktopIcon, UserGroupIcon, EnvelopeIcon, LinkIcon } from '@heroicons/react/24/solid';
 
 export default function PortfolioSite() {
