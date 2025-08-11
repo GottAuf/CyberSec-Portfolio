@@ -11,7 +11,7 @@ export default function Contact() {
         <form action="https://formspree.io/f/your-form-id" method="POST" ... >
       */}
       <form
-        action="mailto:gordiefx@gmail.com"
+        action="https://formspree.io/f/xkgzywod"
         method="POST"
         className="flex flex-col gap-4"
       >
