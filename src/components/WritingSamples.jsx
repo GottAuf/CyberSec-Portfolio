@@ -11,7 +11,7 @@ export default function WritingSamples() {
           <div className="text-xs text-yellow-600 uppercase tracking-wide font-semibold">Article</div>
           <h5 className="font-semibold mt-2 text-slate-900">BugBounty Hunting for XSS in 2025</h5>
           <p className="text-slate-700 mt-3 text-sm leading-relaxed">A practical guide to modern XSS vectors, payloads, and defence strategies.</p>
-          <a href="#" className="mt-4 inline-block text-yellow-600 font-semibold hover:text-yellow-700 transition">
+          <a href="http://bit.ly/4oxxHZf" className="mt-4 inline-block text-yellow-600 font-semibold hover:text-yellow-700 transition">
             Preview →
           </a>
         </article>
