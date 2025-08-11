@@ -1,210 +1,263 @@
 import React from "react";
-
-// Single-file React component portfolio (Tailwind CSS assumed globally available)
-// Default export: PortfolioSite
+import { ChevronRightIcon, ShieldCheckIcon, DocumentTextIcon, ComputerDesktopIcon, UserGroupIcon, EnvelopeIcon, LinkIcon } from '@heroicons/react/24/solid';
 
 export default function PortfolioSite() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 antialiased">
+    <div className="min-h-screen bg-slate-50 text-slate-900 antialiased font-sans">
       {/* NAV */}
-      <header className="bg-white shadow-sm sticky top-0 z-40">
+      <header className="bg-white shadow sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-slate-800 to-yellow-500 flex items-center justify-center text-white font-semibold">GM</div>
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-slate-900 to-yellow-500 flex items-center justify-center text-white font-semibold select-none cursor-default">GM</div>
             <div>
-              <h1 className="text-lg font-semibold">Gordon Maregwa</h1>
-              <p className="text-xs text-gray-500">Cybersecurity Specialist • GRC • Penetration Testing • Technical Writer</p>
+              <h1 className="text-xl font-bold text-slate-900">Gordon Maregwa</h1>
+              <p className="text-xs text-slate-600">Cybersecurity Specialist • GRC • Penetration Testing • Technical Writer</p>
             </div>
           </div>
-          <nav className="hidden md:flex gap-6 text-sm font-medium text-gray-700">
-            <a href="#services">Services</a>
-            <a href="#case-studies">Case Studies</a>
-            <a href="#writing">Writing</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact" className="text-yellow-600">Contact</a>
+          <nav className="hidden md:flex gap-8 text-sm font-semibold text-slate-700">
+            <a href="#services" className="hover:text-yellow-600 transition">Services</a>
+            <a href="#case-studies" className="hover:text-yellow-600 transition">Case Studies</a>
+            <a href="#writing" className="hover:text-yellow-600 transition">Writing</a>
+            <a href="#skills" className="hover:text-yellow-600 transition">Skills</a>
+            <a href="#contact" className="text-yellow-600 font-bold hover:text-yellow-700 transition">Contact</a>
           </nav>
-          <div className="md:hidden">{/* mobile menu placeholder */}
-            <button className="px-3 py-2 rounded-md bg-gray-100">Menu</button>
+          <div className="md:hidden">
+            {/* Mobile menu placeholder */}
+            <button className="px-3 py-2 rounded-md bg-slate-100 hover:bg-slate-200 transition">Menu</button>
           </div>
         </div>
       </header>
 
-      <main className="max-w-6xl mx-auto px-6 py-12">
+      <main className="max-w-6xl mx-auto px-6 py-12 scroll-smooth">
         {/* HERO */}
-        <section className="grid md:grid-cols-2 gap-8 items-center py-8">
+        <section className="grid md:grid-cols-2 gap-10 items-center py-8">
           <div>
-            <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Freelance Cybersecurity Specialist</h2>
-            <p className="mt-4 text-lg text-gray-700">I help startups and SMBs reduce risk, meet compliance requirements, and remediate vulnerabilities through pragmatic GRC consulting, hands-on penetration testing, and clear technical writing. 11+ years of experience.</p>
+            <h2 className="text-4xl font-extrabold leading-tight text-slate-900">Freelance Cybersecurity Specialist</h2>
+            <p className="mt-5 text-lg text-slate-700 leading-relaxed">
+              I help startups and SMBs reduce risk, meet compliance requirements, and remediate vulnerabilities through pragmatic GRC consulting, hands-on penetration testing, and clear technical writing. 11+ years of experience.
+            </p>
 
-            <div className="mt-6 flex gap-4">
-              <a href="#contact" className="inline-block bg-yellow-500 text-white px-5 py-3 rounded-lg font-medium shadow">Hire me</a>
-              <a href="#case-studies" className="inline-block px-5 py-3 rounded-lg border border-gray-200 text-gray-700">View case studies</a>
+            <div className="mt-8 flex gap-5">
+              <a
+                href="#contact"
+                className="inline-block bg-yellow-500 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-yellow-600 transition"
+              >
+                Hire me
+              </a>
+              <a
+                href="#case-studies"
+                className="inline-block px-6 py-3 rounded-lg border border-slate-300 text-slate-700 hover:border-yellow-500 hover:text-yellow-600 transition"
+              >
+                View case studies
+              </a>
             </div>
 
-            <div className="mt-6 text-sm text-gray-500">
-              <p><strong>Available for:</strong> Upwork / Freelancer / Direct contract • Remote</p>
-            </div>
+            <p className="mt-6 text-sm text-slate-500">
+              <strong>Available for:</strong> Upwork / Freelancer / Direct contract • Remote
+            </p>
           </div>
 
           <div className="bg-white rounded-2xl p-6 shadow-md">
-            <div className="text-sm text-gray-500">Highlight</div>
-            <div className="mt-4 grid grid-cols-1 gap-3">
-              <div className="p-3 border rounded-lg">
-                <div className="text-xs text-gray-500">GRC</div>
-                <div className="font-semibold">PCI DSS gap analysis & remediation</div>
-                <div className="text-sm text-gray-600 mt-1">Helped a fintech client achieve compliance in 3 months.</div>
+            <div className="text-sm text-slate-500 uppercase tracking-wide font-semibold">Highlight</div>
+            <div className="mt-5 grid grid-cols-1 gap-4">
+              <div className="p-4 border rounded-lg hover:shadow-lg transition">
+                <div className="flex items-center gap-2 text-yellow-600">
+                  <ShieldCheckIcon className="w-5 h-5" />
+                  <div className="text-xs uppercase tracking-wide font-semibold">GRC</div>
+                </div>
+                <div className="font-semibold text-slate-900 mt-1">PCI DSS gap analysis & remediation</div>
+                <div className="text-sm text-slate-600 mt-1">Helped a fintech client achieve compliance in 3 months.</div>
               </div>
-              <div className="p-3 border rounded-lg">
-                <div className="text-xs text-gray-500">Pentesting</div>
-                <div className="font-semibold">Web app & API penetration testing</div>
-                <div className="text-sm text-gray-600 mt-1">Found critical XSS and IDOR, provided remediation guidance and retest.</div>
+              <div className="p-4 border rounded-lg hover:shadow-lg transition">
+                <div className="flex items-center gap-2 text-yellow-600">
+                  <ComputerDesktopIcon className="w-5 h-5" />
+                  <div className="text-xs uppercase tracking-wide font-semibold">Pentesting</div>
+                </div>
+                <div className="font-semibold text-slate-900 mt-1">Web app & API penetration testing</div>
+                <div className="text-sm text-slate-600 mt-1">Found critical XSS and IDOR, provided remediation guidance and retest.</div>
               </div>
-              <div className="p-3 border rounded-lg">
-                <div className="text-xs text-gray-500">Writing</div>
-                <div className="font-semibold">Technical guides & incident playbooks</div>
-                <div className="text-sm text-gray-600 mt-1">Produced training materials and long-form research articles.</div>
+              <div className="p-4 border rounded-lg hover:shadow-lg transition">
+                <div className="flex items-center gap-2 text-yellow-600">
+                  <DocumentTextIcon className="w-5 h-5" />
+                  <div className="text-xs uppercase tracking-wide font-semibold">Writing</div>
+                </div>
+                <div className="font-semibold text-slate-900 mt-1">Technical guides & incident playbooks</div>
+                <div className="text-sm text-slate-600 mt-1">Produced training materials and long-form research articles.</div>
               </div>
             </div>
           </div>
         </section>
 
         {/* SERVICES */}
-        <section id="services" className="mt-12">
-          <h3 className="text-2xl font-bold">Services</h3>
-          <p className="text-gray-600 mt-2">Choose a service or request a custom scope for your project.</p>
+        <section id="services" className="mt-16">
+          <h3 className="text-3xl font-bold text-slate-900">Services</h3>
+          <p className="text-slate-600 mt-3 max-w-xl">Choose a service or request a custom scope for your project.</p>
 
-          <div className="mt-6 grid md:grid-cols-3 gap-6">
-            <article className="bg-white p-6 rounded-xl shadow-sm border">
-              <div className="text-sm text-gray-500">GRC & Compliance</div>
-              <h4 className="font-semibold mt-2">Risk assessments • Policy • Compliance</h4>
-              <ul className="mt-3 text-sm text-gray-600 space-y-2">
+          <div className="mt-8 grid md:grid-cols-3 gap-8">
+            <article className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg transition">
+              <div className="flex items-center gap-3 text-yellow-600 mb-2">
+                <ShieldCheckIcon className="w-6 h-6" />
+                <div className="text-sm uppercase tracking-wide font-semibold">GRC & Compliance</div>
+              </div>
+              <h4 className="font-semibold mt-1 text-slate-900">Risk assessments • Policy • Compliance</h4>
+              <ul className="mt-4 text-sm text-slate-600 space-y-2 list-disc list-inside">
                 <li>ISO 27001 readiness & implementation</li>
                 <li>PCI DSS gap analysis and remediation</li>
                 <li>GDPR & Data protection advisory</li>
                 <li>Vendor security assessments</li>
               </ul>
-              <div className="mt-4">
-                <a href="#contact" className="text-sm font-medium text-yellow-600">Request GRC proposal →</a>
+              <div className="mt-5">
+                <a href="#contact" className="text-yellow-600 font-semibold hover:text-yellow-700 transition inline-flex items-center gap-1">
+                  Request GRC proposal <ChevronRightIcon className="w-5 h-5" />
+                </a>
               </div>
             </article>
 
-            <article className="bg-white p-6 rounded-xl shadow-sm border">
-              <div className="text-sm text-gray-500">Penetration Testing</div>
-              <h4 className="font-semibold mt-2">Web • Network • Cloud</h4>
-              <ul className="mt-3 text-sm text-gray-600 space-y-2">
+            <article className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg transition">
+              <div className="flex items-center gap-3 text-yellow-600 mb-2">
+                <ComputerDesktopIcon className="w-6 h-6" />
+                <div className="text-sm uppercase tracking-wide font-semibold">Penetration Testing</div>
+              </div>
+              <h4 className="font-semibold mt-1 text-slate-900">Web • Network • Cloud</h4>
+              <ul className="mt-4 text-sm text-slate-600 space-y-2 list-disc list-inside">
                 <li>Web app security (OWASP Top 10, APIs)</li>
                 <li>External & internal network testing</li>
                 <li>Cloud security review (AWS/Azure/GCP)</li>
                 <li>Exploit verification and remediation testing</li>
               </ul>
-              <div className="mt-4">
-                <a href="#contact" className="text-sm font-medium text-yellow-600">Request pentest →</a>
+              <div className="mt-5">
+                <a href="#contact" className="text-yellow-600 font-semibold hover:text-yellow-700 transition inline-flex items-center gap-1">
+                  Request pentest <ChevronRightIcon className="w-5 h-5" />
+                </a>
               </div>
             </article>
 
-            <article className="bg-white p-6 rounded-xl shadow-sm border">
-              <div className="text-sm text-gray-500">Technical Writing</div>
-              <h4 className="font-semibold mt-2">Guides • Reports • Blog posts</h4>
-              <ul className="mt-3 text-sm text-gray-600 space-y-2">
+            <article className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg transition">
+              <div className="flex items-center gap-3 text-yellow-600 mb-2">
+                <DocumentTextIcon className="w-6 h-6" />
+                <div className="text-sm uppercase tracking-wide font-semibold">Technical Writing</div>
+              </div>
+              <h4 className="font-semibold mt-1 text-slate-900">Guides • Reports • Blog posts</h4>
+              <ul className="mt-4 text-sm text-slate-600 space-y-2 list-disc list-inside">
                 <li>Executive pentest reports & remediation plans</li>
                 <li>Security policies, SOPs and playbooks</li>
                 <li>Long-form technical articles for blogs/Medium</li>
                 <li>Training materials and slide decks</li>
               </ul>
-              <div className="mt-4">
-                <a href="#writing" className="text-sm font-medium text-yellow-600">View writing samples →</a>
+              <div className="mt-5">
+                <a href="#writing" className="text-yellow-600 font-semibold hover:text-yellow-700 transition inline-flex items-center gap-1">
+                  View writing samples <ChevronRightIcon className="w-5 h-5" />
+                </a>
               </div>
             </article>
           </div>
         </section>
 
         {/* CASE STUDIES */}
-        <section id="case-studies" className="mt-16">
-          <h3 className="text-2xl font-bold">Case Studies</h3>
-          <p className="text-gray-600 mt-2">Short, client-focused summaries. Detailed reports available on request (NDA-friendly).</p>
+        <section id="case-studies" className="mt-20">
+          <h3 className="text-3xl font-bold text-slate-900">Case Studies</h3>
+          <p className="text-slate-600 mt-3 max-w-xl">
+            Short, client-focused summaries. Detailed reports available on request (NDA-friendly).
+          </p>
 
-          <div className="mt-6 grid md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-xl shadow-sm border">
-              <div className="text-xs text-gray-500">GRC • Fintech</div>
-              <h4 className="font-semibold mt-2">PCI DSS Readiness & Remediation</h4>
-              <p className="text-gray-600 mt-2 text-sm">Performed a full gap analysis across the cardholder data environment, documented 14 control gaps, and delivered a prioritized remediation roadmap plus a tailored security policy pack. Worked with the client's engineers to implement fixes and validated them in a follow-up review.</p>
-              <div className="mt-4 text-sm text-gray-700 font-medium">Outcome: PCI DSS certification achieved within 3 months.</div>
+          <div className="mt-8 grid md:grid-cols-2 gap-8">
+            {/* Repeat case study cards */}
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg transition">
+              <div className="text-xs text-yellow-600 uppercase tracking-wide font-semibold">GRC • Fintech</div>
+              <h4 className="font-semibold mt-2 text-slate-900">PCI DSS Readiness & Remediation</h4>
+              <p className="text-slate-700 mt-3 text-sm leading-relaxed">
+                Performed a full gap analysis across the cardholder data environment, documented 14 control gaps, and delivered a prioritized remediation roadmap plus a tailored security policy pack. Worked with the client's engineers to implement fixes and validated them in a follow-up review.
+              </p>
+              <div className="mt-4 text-sm text-slate-800 font-medium">Outcome: PCI DSS certification achieved within 3 months.</div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-sm border">
-              <div className="text-xs text-gray-500">Pentest • E-commerce</div>
-              <h4 className="font-semibold mt-2">Web Application Penetration Test</h4>
-              <p className="text-gray-600 mt-2 text-sm">Black-box testing of customer-facing web app and API. Identified multiple XSS vectors and an IDOR that allowed unauthorized access to order data. Provided code-level remediation steps and retested after fixes.</p>
-              <div className="mt-4 text-sm text-gray-700 font-medium">Outcome: Vulnerabilities remediated; no high-risk issues at retest.</div>
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg transition">
+              <div className="text-xs text-yellow-600 uppercase tracking-wide font-semibold">Pentest • E-commerce</div>
+              <h4 className="font-semibold mt-2 text-slate-900">Web Application Penetration Test</h4>
+              <p className="text-slate-700 mt-3 text-sm leading-relaxed">
+                Black-box testing of customer-facing web app and API. Identified multiple XSS vectors and an IDOR that allowed unauthorized access to order data. Provided code-level remediation steps and retested after fixes.
+              </p>
+              <div className="mt-4 text-sm text-slate-800 font-medium">Outcome: Vulnerabilities remediated; no high-risk issues at retest.</div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-sm border">
-              <div className="text-xs text-gray-500">Writing • SaaS</div>
-              <h4 className="font-semibold mt-2">Cloud Security Best Practices Guide</h4>
-              <p className="text-gray-600 mt-2 text-sm">Authored a 40-page illustrated guide covering IAM hardening, encryption-at-rest, secure CI/CD, and incident response for a mid-size SaaS provider. The guide was adopted as part of the onboarding for new engineers.</p>
-              <div className="mt-4 text-sm text-gray-700 font-medium">Outcome: Reduced insecure cloud configuration incidents by developer self-reporting and checklist adoption.</div>
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg transition">
+              <div className="text-xs text-yellow-600 uppercase tracking-wide font-semibold">Writing • SaaS</div>
+              <h4 className="font-semibold mt-2 text-slate-900">Cloud Security Best Practices Guide</h4>
+              <p className="text-slate-700 mt-3 text-sm leading-relaxed">
+                Authored a 40-page illustrated guide covering IAM hardening, encryption-at-rest, secure CI/CD, and incident response for a mid-size SaaS provider. The guide was adopted as part of the onboarding for new engineers.
+              </p>
+              <div className="mt-4 text-sm text-slate-800 font-medium">Outcome: Reduced insecure cloud configuration incidents by developer self-reporting and checklist adoption.</div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-sm border">
-              <div className="text-xs text-gray-500">Advisory • Vendor Security</div>
-              <h4 className="font-semibold mt-2">Third-party Vendor Assessment</h4>
-              <p className="text-gray-600 mt-2 text-sm">Conducted security due diligence for a payments provider evaluating an outsourced analytics vendor. Delivered a risk scorecard and remediation requirements to include in the contract.</p>
-              <div className="mt-4 text-sm text-gray-700 font-medium">Outcome: Contract clauses strengthened; high-risk vendor controls remediated.</div>
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-lg transition">
+              <div className="text-xs text-yellow-600 uppercase tracking-wide font-semibold">Advisory • Vendor Security</div>
+              <h4 className="font-semibold mt-2 text-slate-900">Third-party Vendor Assessment</h4>
+              <p className="text-slate-700 mt-3 text-sm leading-relaxed">
+                Conducted security due diligence for a payments provider evaluating an outsourced analytics vendor. Delivered a risk scorecard and remediation requirements to include in the contract.
+              </p>
+              <div className="mt-4 text-sm text-slate-800 font-medium">Outcome: Contract clauses strengthened; high-risk vendor controls remediated.</div>
             </div>
           </div>
         </section>
 
         {/* WRITING SAMPLES */}
-        <section id="writing" className="mt-16">
-          <h3 className="text-2xl font-bold">Writing Samples</h3>
-          <p className="text-gray-600 mt-2">Selected articles and downloadable reports. Click to preview or request full PDF copies.</p>
+        <section id="writing" className="mt-20">
+          <h3 className="text-3xl font-bold text-slate-900">Writing Samples</h3>
+          <p className="text-slate-600 mt-3 max-w-xl">Selected articles and downloadable reports. Click to preview or request full PDF copies.</p>
 
-          <div className="mt-6 grid md:grid-cols-3 gap-6">
-            <article className="bg-white p-4 rounded-lg border shadow-sm">
-              <div className="text-xs text-gray-500">Article</div>
-              <h5 className="font-semibold mt-1">BugBounty Hunting for XSS in 2025</h5>
-              <p className="text-sm text-gray-600 mt-2">A practical guide to modern XSS vectors, payloads, and defence strategies.</p>
-              <div className="mt-3">
-                <a href="#" className="text-sm text-yellow-600 font-medium">Preview →</a>
-              </div>
+          <div className="mt-8 grid md:grid-cols-3 gap-8">
+            <article className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition">
+              <div className="text-xs text-yellow-600 uppercase tracking-wide font-semibold">Article</div>
+              <h5 className="font-semibold mt-2 text-slate-900">BugBounty Hunting for XSS in 2025</h5>
+              <p className="text-slate-700 mt-3 text-sm leading-relaxed">A practical guide to modern XSS vectors, payloads, and defence strategies.</p>
+              <a href="#" className="mt-4 inline-block text-yellow-600 font-semibold hover:text-yellow-700 transition">
+                Preview →
+              </a>
             </article>
 
-            <article className="bg-white p-4 rounded-lg border shadow-sm">
-              <div className="text-xs text-gray-500">Report</div>
-              <h5 className="font-semibold mt-1">Sample Pentest Executive Summary</h5>
-              <p className="text-sm text-gray-600 mt-2">An executive-friendly summary that converts technical findings into business risk and prioritized actions.</p>
-              <div className="mt-3">
-                <a href="#" className="text-sm text-yellow-600 font-medium">Download (sanitized) →</a>
-              </div>
+            <article className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition">
+              <div className="text-xs text-yellow-600 uppercase tracking-wide font-semibold">Report</div>
+              <h5 className="font-semibold mt-2 text-slate-900">Sample Pentest Executive Summary</h5>
+              <p className="text-slate-700 mt-3 text-sm leading-relaxed">An executive-friendly summary that converts technical findings into business risk and prioritized actions.</p>
+              <a href="#" className="mt-4 inline-block text-yellow-600 font-semibold hover:text-yellow-700 transition">
+                Download (sanitized) →
+              </a>
             </article>
 
-            <article className="bg-white p-4 rounded-lg border shadow-sm">
-              <div className="text-xs text-gray-500">Guide</div>
-              <h5 className="font-semibold mt-1">Cloud Security Best Practices</h5>
-              <p className="text-sm text-gray-600 mt-2">Practical checklist and patterns for securely operating workloads in the cloud.</p>
-              <div className="mt-3">
-                <a href="#" className="text-sm text-yellow-600 font-medium">Preview →</a>
-              </div>
+            <article className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition">
+              <div className="text-xs text-yellow-600 uppercase tracking-wide font-semibold">Guide</div>
+              <h5 className="font-semibold mt-2 text-slate-900">Cloud Security Best Practices</h5>
+              <p className="text-slate-700 mt-3 text-sm leading-relaxed">Practical checklist and patterns for securely operating workloads in the cloud.</p>
+              <a href="#" className="mt-4 inline-block text-yellow-600 font-semibold hover:text-yellow-700 transition">
+                Preview →
+              </a>
             </article>
           </div>
         </section>
 
         {/* SKILLS & TOOLS */}
-        <section id="skills" className="mt-16">
-          <h3 className="text-2xl font-bold">Skills & Tools</h3>
-          <div className="mt-4 grid md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-xl border shadow-sm">
-              <h4 className="font-semibold">Technical</h4>
-              <ul className="mt-3 text-sm text-gray-600 space-y-2">
+        <section id="skills" className="mt-20">
+          <h3 className="text-3xl font-bold text-slate-900">Skills & Tools</h3>
+          <div className="mt-6 grid md:grid-cols-2 gap-8">
+            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition">
+              <h4 className="font-semibold mb-4 text-yellow-600 flex items-center gap-2">
+                <ComputerDesktopIcon className="w-6 h-6" />
+                Technical
+              </h4>
+              <ul className="text-sm text-slate-700 space-y-2 list-disc list-inside">
                 <li>Penetration testing: Burp Suite, OWASP ZAP, Metasploit</li>
                 <li>Network tools: Nmap, Wireshark</li>
                 <li>Cloud: AWS, Azure, GCP reviews</li>
                 <li>Scanning & fuzzing: Nessus, OpenVAS, wfuzz</li>
               </ul>
             </div>
-            <div className="bg-white p-6 rounded-xl border shadow-sm">
-              <h4 className="font-semibold">GRC & Writing</h4>
-              <ul className="mt-3 text-sm text-gray-600 space-y-2">
+
+            <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition">
+              <h4 className="font-semibold mb-4 text-yellow-600 flex items-center gap-2">
+                <UserGroupIcon className="w-6 h-6" />
+                GRC & Writing
+              </h4>
+              <ul className="text-sm text-slate-700 space-y-2 list-disc list-inside">
                 <li>ISO 27001, NIST, PCI DSS, GDPR advisory</li>
                 <li>Risk assessments, policy development, vendor audits</li>
                 <li>Technical writing: reports, guides, blog articles</li>
@@ -212,49 +265,70 @@ export default function PortfolioSite() {
               </ul>
             </div>
           </div>
-
-          <div className="mt-6 text-sm text-gray-500">Certifications: list your certifications here (CEH, Security+, ISO 27001 Lead Implementer, etc.)</div>
         </section>
 
         {/* CONTACT */}
-        <section id="contact" className="mt-16 bg-gradient-to-r from-white to-gray-50 p-6 rounded-2xl border">
-          <h3 className="text-2xl font-bold">Contact</h3>
-          <p className="text-gray-600 mt-2">Let's discuss your project — whether it's a one-off pentest, a compliance road‑map, or a technical article. I respond quickly to proposals from Upwork and direct client inquiries.</p>
+        <section id="contact" className="mt-20 max-w-xl mx-auto">
+          <h3 className="text-3xl font-bold text-slate-900 mb-6">Get in touch</h3>
+          <form
+            action="mailto:youremail@example.com"
+            method="POST"
+            className="flex flex-col gap-4"
+          >
+            <label className="flex flex-col text-sm font-semibold text-slate-700">
+              Name
+              <input
+                type="text"
+                name="name"
+                required
+                className="mt-1 p-2 rounded-md border border-slate-300 focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 outline-none transition"
+                placeholder="Your full name"
+              />
+            </label>
 
-          <div className="mt-6 grid md:grid-cols-2 gap-6 items-center">
-            <div className="bg-white p-6 rounded-xl border shadow-sm">
-              <h4 className="font-semibold">Let's get started</h4>
-              <p className="text-sm text-gray-600 mt-2">Share project scope, timeline, and any constraints. I will provide a concise proposal and price estimate.</p>
+            <label className="flex flex-col text-sm font-semibold text-slate-700">
+              Email
+              <input
+                type="email"
+                name="email"
+                required
+                className="mt-1 p-2 rounded-md border border-slate-300 focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 outline-none transition"
+                placeholder="you@example.com"
+              />
+            </label>
 
-              <div className="mt-4 space-y-2 text-sm">
-                <div><strong>Email:</strong> <a href="mailto:your-email@example.com" className="text-yellow-600">your-email@example.com</a></div>
-                <div><strong>Upwork:</strong> <a href="#" className="text-yellow-600">/u/your-upwork-profile</a></div>
-                <div><strong>LinkedIn:</strong> <a href="#" className="text-yellow-600">linkedin.com/in/yourprofile</a></div>
-              </div>
-            </div>
+            <label className="flex flex-col text-sm font-semibold text-slate-700">
+              Message
+              <textarea
+                name="message"
+                required
+                rows={5}
+                className="mt-1 p-2 rounded-md border border-slate-300 focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 outline-none transition"
+                placeholder="Write your message here..."
+              />
+            </label>
 
-            <form className="bg-white p-6 rounded-xl border shadow-sm">
-              <label className="block text-sm font-medium text-gray-700">Name</label>
-              <input type="text" className="mt-1 w-full border rounded-md p-2" placeholder="Your name" />
+            <button
+              type="submit"
+              className="bg-yellow-500 text-white font-semibold py-3 rounded-lg hover:bg-yellow-600 transition"
+            >
+              Send Message
+            </button>
+          </form>
 
-              <label className="block text-sm font-medium text-gray-700 mt-3">Email</label>
-              <input type="email" className="mt-1 w-full border rounded-md p-2" placeholder="you@example.com" />
-
-              <label className="block text-sm font-medium text-gray-700 mt-3">Project brief</label>
-              <textarea className="mt-1 w-full border rounded-md p-2" rows={4} placeholder="Brief description of the project, timeline, budget."></textarea>
-
-              <div className="mt-4 flex gap-3">
-                <button type="submit" className="px-4 py-2 rounded-md bg-yellow-500 text-white font-medium">Send message</button>
-                <button type="reset" className="px-4 py-2 rounded-md border">Reset</button>
-              </div>
-            </form>
-          </div>
+          <p className="text-sm text-slate-500 mt-6">
+            Or email me directly at{" "}
+            <a
+              href="mailto:youremail@example.com"
+              className="text-yellow-600 hover:text-yellow-700 underline transition"
+            >
+              youremail@example.com
+            </a>
+          </p>
         </section>
 
-        {/* FOOTER */}
-        <footer className="mt-16 py-8 text-sm text-gray-500 text-center">
-          <div>© {new Date().getFullYear()} Gordon Maregwa — Cybersecurity Specialist. All rights reserved.</div>
-          <div className="mt-2">Available for freelance work on Upwork, Freelancer and direct contracts.</div>
+        <footer className="mt-20 py-10 border-t border-slate-200 text-center text-sm text-slate-500 select-none">
+          &copy; {new Date().getFullYear()} Gordon Maregwa. All rights reserved.
         </footer>
       </main>
     </div>
