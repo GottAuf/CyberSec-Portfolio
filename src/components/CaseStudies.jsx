@@ -5,7 +5,7 @@ export default function CaseStudies() {
     <section id="case-studies" className="mt-20">
       <h3 className="text-3xl font-bold text-slate-900">Case Studies</h3>
       <p className="text-slate-600 mt-3 max-w-xl">
-        Short, client-focused summaries. Detailed reports available on request (NDA-friendly).
+        Detailed reports available on request (NDA-friendly).
       </p>
 
       <div className="mt-8 grid md:grid-cols-2 gap-8">
